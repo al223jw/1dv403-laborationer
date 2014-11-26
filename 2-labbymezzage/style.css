@@ -1,0 +1,55 @@
+#container
+{
+    width:100%;
+    height:9050px;
+    background-color:black;
+    text-align:center;
+    font-size:30px;
+    color:white;
+}
+#main
+{
+    width:900px;
+    height:600px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:lightblue;
+}
+#main p
+{
+    text-align:right;
+    font-size:11px;
+}
+#submit
+{
+    float:right;
+    margin-right:231px;
+}
+#textarea
+{
+    width:430px;
+    height:150px;
+}
+#area
+{
+    background-color:white;
+    width:435px;
+    height:60px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#message
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:420px;
+    height:30px;
+    background-color:lightgreen;
+}
+#counter p
+{
+    text-align:right;
+    font-size:px;
+    color:black;
+}
+

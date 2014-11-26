@@ -7,7 +7,40 @@ window.onload = function(){
 		
 
 
-			// Din kod här.
+		var someday = 24*60*60*1000;
+		
+		var	BirthOfUser = new Date(date);
+		var theDate = new Date();
+		
+		if (BirthOfUser === "")
+		{
+			throw new Error("Skärp dig!");
+		}
+		
+		
+		
+		BirthOfUser.setFullYear(theDate.getFullYear());
+		
+			if (theDate.getTime() > BirthOfUser.getTime())
+			{
+				
+				 BirthOfUser.setFullYear(theDate.getFullYear() + 1);
+			}
+		
+		
+		var remaining = Math.ceil((BirthOfUser.getTime() - theDate.getTime()) / someday);
+		
+		if(remaining == 365)
+		{
+			
+			return 0;
+		}
+		
+		else
+		{
+			
+		return remaining;
+		}
 
 
 

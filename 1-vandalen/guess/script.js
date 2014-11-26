@@ -17,11 +17,12 @@ window.onload = function()
 
 		// Returnera exempelvis:
 		
-	guesses++;
+
 		
 		// I följande kodstycke skriver jag ut alla mina True och False värden. Vilket kommer berätta om talet är för högt, litet eller rätt!
 		if(number == secret) 
 		{
+			guesses++;
 			return [true, "Grattis du vann! Det hemliga talet var " + secret + "och du behövde " +guesses +  " gissningar för att hitta det."];
 		}
 		
@@ -32,11 +33,13 @@ window.onload = function()
 		
 		if(number < secret)
 		{
+			guesses++;
 			return [false, "Det hemliga talet är högre! Du gissade: " + number];
 		}
 		
 		if(number > secret)
 		{
+			guesses++;
 			return [false, "Det hemliga talet är lägre! Du gissade: " + number];
 		}
 	}
