@@ -1,43 +1,43 @@
 "use strict";
 
-function Message(counter, date)
+function Message(message, date)
 {
-    counter.getText = function()
+    this.getText = function()
     {
-        return counter;
+    return message;
     };
 
-    counter.setText = function(_text)
+    this.setText = function(_text)
     {
-        counter = _text;
+    message = _text;
     };
 
 
-    date.getDate = function()
+    this.getDate = function()
     {
-        return date;
+    return date;
     };
-    date.setDate = function(_date)
+    this.setDate = function(_date)
     {
-        date = _date;
+    date = _date;
     };
 }
 
 Message.prototype.toString = function()
 {
-    return Message.getText()+" ("+Message.getDate()+")";
+    return this.getText()+" ("+this.getDate()+")";
 };
 
 Message.prototype.getHTMLText = function()
 {
-    return Message.getText().replace(/[\n\r]/g, "<br/>");
+    return this.getText().replace(/[\n\r]/g, "<br/>");
 };
 
 Message.prototype.getDateText = function()
 {
-    var h = Message.getDate().getHours();
-    var m = Message.getDate().getMinutes();
-    var s = Message.getDate().getSeconds();
+    var h = this.getDate().getHours();
+    var m = this.getDate().getMinutes();
+    var s = this.getDate().getSeconds();
     var time = h+":"+m+":"+s;
     return time;
 };

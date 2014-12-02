@@ -3,11 +3,11 @@
 var count = 0;
 var submit = document.querySelector("#submit");
 var countMessage = document.getElementById("counter");
-var textMessage = document.getElementByID("textarea");
+var textMessage = document.getElementById("textarea");
 var myObject = {};
-var allMessages;
-var enter = document.getElementByID("textarea");
-var messageholder = document.getElementById("area");
+var allMessages =[];
+var enter = document.getElementById("textarea");
+var messageholder = document.getElementById("message");
 
 textMessage.value ="";
 countMessage.innerHTML = "Antal medelande: " + count;
@@ -58,12 +58,12 @@ var createMessage = function(messageID)
         text.className = "text";
         text.setAttribute('id', messageID);
        
-    var image = document.createElement('img');
-        image.src = "exit.png";
-        image.className = "deletePic"+messageID;
-        image.alt = "Delete";
+    var exit = document.createElement('img');
+        exit.src = "pics/exit.png";
+        exit.className = "deletePic"+messageID;
+        exit.alt = "Delete";
     
-    image.onclick = function()
+    exit.onclick = function()
     {
         var question = confirm("vill du verkligen radera meddelandet?");
                
@@ -72,17 +72,16 @@ var createMessage = function(messageID)
                    
             messageRemove(messageID);
             text.parentNode.removeChild(text);
-            createMessage(allMessages);
+            countMessage.innerHTML = "Antal meddelande: " + allMessages.length;
         }
         else
         {
             return false;
         }
-    
     };
 
     var clock = document.createElement('img');
-        clock.src = "clock.png";
+        clock.src = "pics/clock.png";
         clock.className = "clockPic";
         clock.alt = "Time of message";
    
@@ -97,7 +96,7 @@ var createMessage = function(messageID)
     
         text.innerHTML = allMessages[messageID].getHTMLText();
         messageholder.appendChild(text);     
-        text.appendChild(image);
+        text.appendChild(exit);
         text.appendChild(clock);
         text.appendChild(theClock);
     
