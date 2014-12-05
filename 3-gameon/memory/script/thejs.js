@@ -3,14 +3,12 @@
 window.onload = function()
 {
     var memory = [];
-    var header1 = document.querySelector("#header1");
-    var header2 = document.querySelector("#header2");
+    var header1 = document.querySelector("#startgame1");
+    var header2 = document.querySelector("#startgame2");
     var board1 = document.querySelector("#section1");
     var board2 = document.querySelector("#section2");
-    var element = 0;
     var text = document.querySelector("#text");
     var table = document.createElement('table');
-    
     var tries = 0;
     var firstTry = null;
     var secondTry = null;
@@ -19,7 +17,8 @@ window.onload = function()
     var pairs = 0;
 
     header1.addEventListener("click", function(e)
-    {   
+    {  
+       e.preventDefault();
        memory = new RandomGenerator.getPictureArray(2, 4);
        console.log(memory);
        
@@ -30,6 +29,7 @@ window.onload = function()
     
     header2.addEventListener("click", function(e)
     {  
+       e.preventDefault();    
        memory = new RandomGenerator.getPictureArray(4, 4);
        console.log(memory);
        
@@ -40,7 +40,7 @@ window.onload = function()
     {
         var count = 0;
         clear();
-         text.innerHTML = "You Have Found: 0";
+        text.innerHTML = "You Have Found: 0";
         table = document.createElement('table');
             for (var i = 0; i < Row; i++)
             {
@@ -51,7 +51,7 @@ window.onload = function()
                     var tableCell = document.createElement('tableCell');
                     var img = document.createElement('img');
                     var link = document.createElement('a');
-                    link.Href = "#";
+                    link.href = "#";
                     
                     img.src = "pics/0.png";
                     img.className = "pics/"+memory[count]+".png";
