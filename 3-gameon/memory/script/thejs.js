@@ -117,7 +117,7 @@ window.onload = function()
                             status = true;
 
                             
-                        }, 1000);
+                        }, 500);
                     }
                 if(pairs < memory.length/2)
                 {

@@ -1,0 +1,72 @@
+html
+{
+    background-color:red;
+}
+
+#header
+{
+    background-color:Green;
+    width:900px;
+    height:218px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    font-size:30px;
+}
+
+#main
+{
+    width:900px;
+    height:600px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:Aqua;
+}
+#textarea
+{
+    width:362px;
+    margin-top: 5px;
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+}
+#submit
+{
+   margin-left:587px;
+   margin-top:-19px;
+}
+#restart
+{
+    width:200px;
+    height:100px;
+    margin-left:652px;
+    margin-top:-296px; 
+}
+.restart 
+{
+    background-color: pink;
+    font-size: 30px;
+    width: 214px;
+    height: 115px;
+}
+
+#section1
+{
+    width:363px;
+    height:100px;
+    background-color:white;
+    margin-bottom:10px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:30px;
+}
+#section2
+{
+    width:363px;
+    height:385px;
+    background-color:white;
+    margin-top:0;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:32px;
+}
