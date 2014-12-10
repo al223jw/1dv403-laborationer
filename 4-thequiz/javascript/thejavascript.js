@@ -126,7 +126,7 @@ var quiz =
         quiz.arrayTry = [];
         quiz.jsoncopy = null;
         quiz.restart = 0;
-        status.innerHTML = "";
+        status.innerHTML = "Det blir kul..";
         quiz.init();
     }
 };

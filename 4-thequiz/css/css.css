@@ -70,3 +70,7 @@ html
     margin-right:auto;
     font-size:32px;
 }
+#section2 p
+{
+    margin-top:0;
+}
