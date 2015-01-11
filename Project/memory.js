@@ -3,6 +3,6 @@
 function Memory(w)
 {
     w.setTitle("Memory");
-    w.Status("Boom!");
-    
+    w.Status("Loading");
+    w.Imgtoptitle("pics/Memory.png");
 }

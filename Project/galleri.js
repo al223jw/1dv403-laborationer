@@ -4,17 +4,22 @@ function Galleri(w)
 {
     w.setTitle("Galleri");
     w.Status("Loading");
+    w.Imgtoptitle("pics/galleri.png");
     
     var box = w.box;   
     
     var XHR = new XMLHttpRequest();
     
+    w.underline.appendChild(w.titelelement3);
+  
     XHR.onreadystatechange = function()
     {
       if(XHR.readyState == 4 && XHR.status === 200)
       {
+            w.titelelement3.parentNode.removeChild(w.titelelement3);
+            w.Status("Click to view picture!");
+            
             var array = JSON.parse(XHR.responseText);
-            console.log(array);
             
             for(var i=0; i<array.length; i++)
             {
@@ -49,4 +54,7 @@ function Viewpic(w, URL)
     img.classList.add("bigimg");
     img.src = URL;
     w.box.appendChild(img);
+    w.setTitle("Image Viewer");
+    w.Status("Picture");
+    w.Imgtoptitle("pics/galleri.png");
 }

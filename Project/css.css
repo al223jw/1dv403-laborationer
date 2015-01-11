@@ -49,15 +49,6 @@ html, body
     padding:0;
     float: left;    
 }
-.load1
-{
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    -webkit-animation:spin 4s linear infinite;
-
-    transform:rotate(99999999999999999999999999999999deg);
-}  
 
 .box
 {
@@ -91,6 +82,18 @@ html, body
 }
 .title2
 {
-    width:60px;
+    width:135px;
     margin:0;
+}
+.img
+{
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 16px;
+    height: 16px;
+}
+.load1
+{
+    background-color:gray;
 }
